@@ -1,0 +1,17 @@
+# Compilation
+build/
+build_linux/
+AppDir/
+*.AppImage
+*.exe
+*.o
+*.obj
+
+# CMake
+CMakeCache.txt
+CMakeFiles/
+cmake_install.cmake
+Makefile
+
+# VS Code
+.vscode/
