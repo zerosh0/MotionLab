@@ -3,7 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![C/C++](https://img.shields.io/badge/language-C%20%2F%20C%2B%2B-orange)
 ![License](https://img.shields.io/badge/license-GPLv3-g)
-
+[![Latest Release](https://img.shields.io/github/v/release/zerosh0/MotionLab)](https://github.com/zerosh0/MotionLab/releases)
 
 **MotionLab** is a modern tool for video tracking and kinematic analysis, designed for teaching and physics research. Using **OpenCV** for object tracking and the lightweight **Raylib** for the interface, it provides a fast, smooth, and intuitive alternative to traditional software.
 

@@ -3,6 +3,7 @@
 ![Version](https://img.shields.io/badge/version-1.0.0-blue)
 ![C/C++](https://img.shields.io/badge/language-C%20%2F%20C%2B%2B-orange)
 ![License](https://img.shields.io/badge/license-GPLv3-g)
+[![Latest Release](https://img.shields.io/github/v/release/zerosh0/MotionLab)](https://github.com/zerosh0/MotionLab/releases)
 
 For English version, see [README_EN.md](README_EN.md)
 
