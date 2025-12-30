@@ -26,6 +26,8 @@ dont l’ergonomie et les contraintes techniques ne sont pas toujours en phase a
 * **Simplicité "Drag & Drop"** : Importez une vidéo, calibrez l'échelle en deux clics, et commencez l'analyse immédiatement.
 * **Zéro Limite** : Aucune restriction artificielle sur la résolution (4K supportée) ou la durée des vidéos traitées.
 * **Cross-Platform** : Fonctionne sur Linux et Windows (MacOS devrait marcher aussi, théoriquement. Empiriquement… à confirmer.)
+* **Pointage Assisté Intelligent** : Lorsque le pointage manuel devient long ou fastidieux, MotionLab peut **suivre automatiquement un objet** sur plusieurs centaines d’images, tout en conservant la possibilité de reprendre la main à tout moment.
+
 * **Aucune Télémétrie, Aucun Suivi** : MotionLab ne collecte, n’enregistre et ne transmet absolument aucune donnée d’usage, statistique ou comportementale.
 
 > MotionLab a été conçu pour s’effacer au profit de l’analyse physique,
@@ -33,11 +35,23 @@ et non l’inverse.
 
 ---
 
+## 🖱️ Pointage Simple et Rapide
+
+MotionLab permet un **pointage manuel immédiat**.
+
+Il suffit de :
+1. **Placer l’origine et orienter les axes**
+2. **Définir l’échelle** à partir d’une distance connue
+3. **Choisir la première image** à analyser (si nécessaire)
+4. **Commencer à pointer**, image par image, par un simple clic
+
+![Trajectoire](assets/images/showcase.gif)
+
 ## 🤖 Système d'Auto-Tracking (CSRT)
 
 MotionLab peut utiliser un module de suivi automatique basé sur l'algorithme **OpenCV CSRT** (Channel and Spatial Reliability Tracker).
 
-![Trajectoire](assets/images/image2.png)
+![Trajectoire](assets/images/tracking.gif)
 
 ### Avantages du suivi intelligent
 Contrairement au simple "Template Matching" (recherche de pixels identiques), le tracker de MotionLab :
@@ -61,7 +75,7 @@ Bien que performant, l'auto-tracking rencontre des limites inhérentes à la vis
 ---
 
 ## 📊 Analyse Scientifique et Graphiques
-![Trajectoire](assets/images/image3.png)
+![Trajectoire](assets/images/curves.gif)
 ### Précision des mesures
 Pour minimiser le bruit numérique lors des calculs de dérivation, MotionLab utilise la méthode de la **différence centrale** :
 $$v_i = \frac{x_{i+1} - x_{i-1}}{t_{i+1} - t_{i-1}}$$
@@ -73,7 +87,7 @@ L'outil graphique intègre un moteur de régression permettant de superposer des
 * **Quadratique** : $f(t) = a \cdot t^2 + b \cdot t + c$
 
 ![Trajectoire](assets/images/image4.png)
-![Trajectoire](assets/images/image5.png)
+![Trajectoire](assets/images/image3.png)
 ---
 
 ## 🏗️ Structure du Projet

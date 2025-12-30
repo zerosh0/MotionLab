@@ -25,17 +25,31 @@ MotionLab was created to fix common frustrations with so-called "legacy" trackin
 * **Drag & Drop Simplicity** : Import a video, calibrate the scale in two clicks, and start analyzing immediately.
 * **No Limits** : No artificial restrictions on resolution (4K supported) or video length.
 * **Cross-Platform** : Works on Linux and Windows (MacOS should work theoretically… empirically, results may vary).
+* **Intelligent Assisted Tracking**: When manual pointing becomes long or tedious, MotionLab can **automatically track an object** across hundreds of frames, while still allowing you to take back manual control at any time.
+
 * **No Telemetry, No Tracking**: MotionLab does not collect, record, or transmit any usage, statistical, or behavioral data.
 
 > MotionLab is designed to step out of the way and let the physics analysis shine.
 
 ---
 
+## 🖱️ Simple and Fast Pointing
+
+MotionLab allows **immediate manual point tracking**.
+
+All you need to do is:
+1. **Set the origin and orient the axes**
+2. **Define the scale** using a known distance
+3. **Select the first frame** to analyze (if needed)
+4. **Start pointing**, frame by frame, with a single click
+
+![Trajectory](assets/images/showcase.gif)
+
 ## 🤖 Auto-Tracking System (CSRT)
 
 MotionLab can use an automatic tracking module based on **OpenCV CSRT** (Channel and Spatial Reliability Tracker).
 
-![Trajectoire](assets/images/image2.png)
+![Trajectoire](assets/images/tracking.gif)
 
 ### Smart Tracking Advantages
 Unlike simple template matching, MotionLab’s tracker:
@@ -43,7 +57,7 @@ Unlike simple template matching, MotionLab’s tracker:
 2.  **Noise-Resistant** : Real-time CLAHE (Contrast Limited Adaptive Histogram Equalization) and Gaussian blur stabilize detection.
 3.  **Predicts Trajectory** : If the object is temporarily lost, the tracker uses the last known velocity vector to predict its position and try to reacquire it.
 
-### 💡 Bonnes pratiques d’utilisation
+### 💡 Best practices for use
 
 For optimal results, it is strongly recommended to start auto-tracking once the object is free of contact and actual movement begins.
 >(The tracker is looking for the ball, not your hand.)
@@ -60,7 +74,7 @@ Even though it performs well, auto-tracking has inherent computer vision limits:
 ---
 
 ## 📊 Scientific Analysis and Graphs
-![Trajectoire](assets/images/image3.png)
+![Trajectoire](assets/images/curves.gif)
 ### Measurement Accuracy
 To minimize numerical noise when computing derivatives, MotionLab uses the **central difference method**:
 $$v_i = \frac{x_{i+1} - x_{i-1}}{t_{i+1} - t_{i-1}}$$
@@ -72,7 +86,7 @@ The graphing tool includes a regression engine to overlay trend lines with autom
 * **Quadratic** : $f(t) = a \cdot t^2 + b \cdot t + c$
 
 ![Trajectoire](assets/images/image4.png)
-![Trajectoire](assets/images/image5.png)
+![Trajectoire](assets/images/image3.png)
 ---
 
 ## 🏗️ Structure du Projet
