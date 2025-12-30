@@ -89,7 +89,7 @@ The graphing tool includes a regression engine to overlay trend lines with autom
 ![Trajectoire](assets/images/image3.png)
 ---
 
-## 🏗️ Structure du Projet
+## 🏗️ Project Structure
 
 ```text
 MotionLab/
